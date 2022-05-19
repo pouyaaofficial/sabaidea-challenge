@@ -14,5 +14,10 @@
         }
     },
     "type": "project",
-    "require": {}
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.8"
+    },
+    "scripts": {
+        "stylefix": "@php ./vendor/bin/php-cs-fixer fix"
+    }
 }

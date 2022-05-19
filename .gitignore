@@ -1,3 +1,4 @@
 .env
 /docker/nginx/logs
 /vendor/
+.php-cs-fixer.cache
