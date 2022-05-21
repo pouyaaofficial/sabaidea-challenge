@@ -16,9 +16,11 @@
     },
     "type": "project",
     "require": {
-        "friendsofphp/php-cs-fixer": "^3.8"
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "vlucas/phpdotenv": "^5.4"
     },
     "scripts": {
-        "stylefix": "@php ./vendor/bin/php-cs-fixer fix"
+        "stylefix": "@php ./vendor/bin/php-cs-fixer fix",
+        "stylecheck": "@php ./vendor/bin/php-cs-fixer fix --dry-run"
     }
 }

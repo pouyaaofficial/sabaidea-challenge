@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "e2a715c6-da05-4362-861a-b9b2917dd97b",
+		"name": "Sabaidea Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14535380"
+	},
+	"item": [
+		{
+			"name": "Signup User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "something@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Open Short Url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/something",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"something"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User Urls",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "something@example.com",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456789",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/urls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"urls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "something@example.com",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456789",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://www.google.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/urls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"urls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Url",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "email",
+						"value": "something@example.com",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456789",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://digikala.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/urls/something",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"urls",
+						"something"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Url",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "email",
+						"value": "something@example.com",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "123456789",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/v1/urls/something",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"urls",
+						"something"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
